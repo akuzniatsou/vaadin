@@ -13,11 +13,11 @@ import javax.servlet.http.HttpServletRequest;
 
 @WebServlet(
     name = "Vaadin Application Servlet",
-    description = "Vaadin application class to start",
     urlPatterns = "/*",
-    initParams = {@WebInitParam(description = "Vaadin application class to start", name = "applicationBean", value = "my.vaadin.web.MyVaadinApplication"),
-                        @WebInitParam(name = "allowedTypes", value = "jpg,jpeg,gif,png")
-                }
+    initParams = {
+            @WebInitParam(name = "applicationBean", value = "my.app"),
+            @WebInitParam(name = "productionMode", value = "false")
+    }
 )
 public class MyServlet extends AbstractApplicationServlet {
 
@@ -47,5 +47,4 @@ public class MyServlet extends AbstractApplicationServlet {
     protected Class<? extends Application> getApplicationClass() throws ClassNotFoundException {
         return applicationClass;
     }
-
 }

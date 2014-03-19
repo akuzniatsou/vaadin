@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 /**
  * The Application's "main" class
  */
-@Component("my.vaadin.web.MyVaadinApplication")
+@Component("my.app")
 @Scope(value = "prototype")
 public class MyVaadinApplication extends Application
 {
@@ -33,7 +33,5 @@ public class MyVaadinApplication extends Application
             }
         });
         window.addComponent(button);
-        
     }
-    
 }

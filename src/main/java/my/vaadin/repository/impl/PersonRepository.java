@@ -21,5 +21,4 @@ public class PersonRepository implements IPersonRepository {
     public Person read(String id) {
         return mongoTemplate.findById(id, Person.class);
     }
-
 }
